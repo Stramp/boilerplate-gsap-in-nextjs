@@ -1,13 +1,17 @@
 import styled, { css } from 'styled-components'
 
-export const Box = styled.main`
+export const Box = styled.div`
   ${({ theme }) => css`
-    width: 100%;
-    height: 100%;
-    background-color: ${theme.colors.black};
-    color: ${theme.colors.white};
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    div {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 1500px;
+      background-color: ${theme.colors.secondary};
+      color: ${theme.colors.white};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   `}
 `

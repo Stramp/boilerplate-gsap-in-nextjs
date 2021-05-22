@@ -1,11 +1,23 @@
+import React, { forwardRef } from 'react'
 import * as S from './styles'
+type IMyComponentProps = {
+  ref?: React.RefObject<HTMLDivElement>
+}
 
-const Header = () => {
+// type IMyComponentProps = {
+//   text?: string
+// }
+const Header: React.ForwardRefRenderFunction<HTMLDivElement, IMyComponentProps> = (
+  Props,
+  ref
+) => {
   return (
     <S.Box>
-      <h1>Header</h1>
+      <div id="c" ref={ref}>
+        sdasdasda
+      </div>
     </S.Box>
   )
 }
 
-export default Header
+export default forwardRef(Header)
