@@ -1,10 +1,10 @@
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import Stage from '.'
+import Section from '.'
 
-describe('<Stage />', () => {
+describe('<Section />', () => {
   it('should render element', () => {
-    const { container } = renderWithTheme(<Stage />)
+    const { container } = renderWithTheme(<Section />)
 
     expect(container.firstChild).toBeInTheDocument()
   })

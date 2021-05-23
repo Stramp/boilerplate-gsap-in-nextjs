@@ -4,73 +4,49 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
+import Section from 'components/Section'
+
 export const Box = styled.div`
   ${({ theme }) => css`
     width: 100px;
     height: 100px;
-    position: absolute;
-    top: 1500px;
     background-color: ${theme.colors.secondary};
     color: ${theme.colors.white};
     display: flex;
+    margin-top: 500px;
     align-items: center;
     justify-content: center;
   `}
 `
 export default function Home() {
-  const header = useRef<HTMLDivElement>(null)
+  const text = useRef<HTMLHeadingElement>(null)
+  console.log('text.current', text.current)
   useEffect(() => {
-    gsap.to('#thirdCircle', {
-      x: 500,
-      duration: 1,
-      scrollTrigger: {
-        trigger: '#thirdCircle',
-        scrub: 1
-      }
-    })
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: text.current?.id,
+          start: 'top 30%',
+          end: '290% top',
+          scrub: 1,
+          pin: '#teste h1',
+          markers: true
+        }
+      })
+      .to(text.current, { scale: 14 })
+      .to(text.current, { scale: 7, x: -200, rotation: -45 })
+      .to(text.current, { rotation: 0 })
+      .to(text.current, { rotation: 180 })
+      .to(text.current, { rotation: 0, x: -200 })
+      .to(text.current, { rotation: 180 })
+      .to(text.current, { rotation: 0 })
+      .to(text.current, { scale: 7, x: 0, rotation: 0 })
+      .to(text.current, { scale: 1 })
   }, [])
   return (
-    <>
-      <div
-        id="thirdCircle"
-        ref={header}
-        style={{
-          backgroundColor: 'black',
-          borderRadius: '50%',
-          height: '100px',
-          width: '100px',
-          margin: '100px 0',
-          border: ' 2px solid yellow',
-          position: 'absolute',
-          top: '1500px'
-        }}
-      />
-      <div
-        id="thirdCircle1"
-        ref={header}
-        style={{
-          backgroundColor: 'red',
-          borderRadius: '50%',
-          height: '100px',
-          width: '100px',
-          margin: '400px 0',
-          border: ' 2px solid yellow'
-        }}
-      />
-      <div
-        id="thirdCircle1"
-        ref={header}
-        style={{
-          backgroundColor: 'red',
-          borderRadius: '50%',
-          height: '100px',
-          width: '100px',
-          margin: '200px 0',
-          border: ' 2px solid yellow',
-          position: 'absolute',
-          top: '2500px'
-        }}
-      />
-    </>
+    <div>
+      <Section ref={text} id="teste" />
+      <Section id="teste2" />
+    </div>
   )
 }
