@@ -6637,11 +6637,6 @@ gsap@*:
   version "3.6.1"
   resolved "./gsap-bonus.tgz#feb9df8d00cd013425b613fa4031d31279a5ad9d"
 
-"gsap@npm:@gsap/member":
-  version "3.6.1"
-  resolved "https://npm.greensock.com/@gsap%2fmember/-/member-3.6.1.tgz#bc667450cb2ae3805401b821e12b65d8adf7ae1f"
-  integrity sha512-c7uKLWmD8Gcpd7IWxoQWzjkfMTdTxPwgs853BkjnLX2UMulqmw2MWkAZDxAvUZCng9H55lUuFlyRKeZlgbFFgQ==
-
 gud@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
