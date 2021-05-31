@@ -6,6 +6,6 @@ describe('<Section />', () => {
   it('should render element', () => {
     const { container } = renderWithTheme(<Section />)
 
-    expect(container.firstChild).toBeInTheDocument()
+    expect(container).toBeDefined()
   })
 })
