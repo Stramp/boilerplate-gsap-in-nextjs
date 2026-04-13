@@ -38,7 +38,7 @@
     "@testing-library/react": "^11.2.7",
     "@types/gsap": "^3.0.0",
     "@types/jest": "^26.0.23",
-    "@types/node": "^15.6.0",
+    "@types/node": "^25.6.0",
     "@types/react": "^17.0.5",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
